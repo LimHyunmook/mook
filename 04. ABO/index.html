@@ -1,0 +1,300 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A.B.O's Cocktail</title>
+<link rel="icon" href="imgs/symbol.ico">
+<link rel="shortcut icon" href="imgs/icon.png" />
+<link rel="apple-touch-icon" href="imgs/icon.png">
+<link rel="stylesheet" href="fontAwesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="vegas/vegas.min.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/desktop-fhd.css" media="screen and (min-width:1450px)">
+<link rel="stylesheet" href="css/desktop-hd.css" media="screen and (min-width:1050px) and (max-width:1449px)">
+<link rel="stylesheet" href="css/mobile-tablet.css" media="screen and (min-width:700px) and (max-width:1049px)">
+<link rel="stylesheet" href="css/mobile-smart.css" media="screen and (max-width:699px)">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="vegas/vegas.min.js"></script>
+<script src="js/jquery.scrollTo.min.js"></script>
+<script src="js/find-height.js"></script>
+<script>
+	$(document).ready(function(e) {
+        $('#main').vegas({ slides:[{src:'imgs/main-bg1.jpg'}, {src:'imgs/main-bg2.jpg'}], delay:10000, animation: [ 'kenburnsUp' ] });
+		$('#recommendation').vegas({ slides:[{src:'imgs/rec-bg1.jpg'}, {src:'imgs/rec-bg2.jpg'}], delay:10000, animation: [ 'kenburnsRight' ] });
+		$('#search').vegas({ slides:[{src:'imgs/search-bg1.jpg'}, {src:'imgs/search-bg2.jpg'}], delay:10000, animation: [ 'kenburnsLeft' ] });
+		
+		$('#main-menu a').click(function( ) {
+			$.scrollTo(this.hash || 0, 1500); 
+			e.preventDefault( ); 
+		});
+		
+		$('.btn-group a').click(function( ) {
+			$.scrollTo(this.hash || 0, 1500); 
+			e.preventDefault( ); 
+		});
+		
+		$('aside a').click(function( ) {
+			$.scrollTo(this.hash || 0, 1500); 
+			e.preventDefault( ); 
+		});
+		
+		$('.ft-logo a').click(function( ) {
+			$.scrollTo(this.hash || 0, 1500); 
+			e.preventDefault( ); 
+		});
+		
+		$('#trigger').click(function( ) { 
+			$('nav ul#main-menu').slideToggle( );
+		});
+		
+		var time = setInterval(findHeight, 300);	
+		
+    });
+</script>
+</head>
+
+<body>
+    <header>
+        <div class="hd-wrap">
+            <div class="logo"><a href="#main"><img src="imgs/logo.png" alt="ABO 로고" class="no-smart"><img src="imgs/symbol.png" alt="ABO 심볼" class="smart"></a></div>
+            <nav>
+            	<a href="#" id="trigger"><img src="imgs/trigger.png" alt="트리거 이미지"></a>
+                <ul id="main-menu">
+                    <li><a href="#introduction">소개</a></li>
+                    <li><a href="#recommendation">추천</a></li>
+                    <li><a href="#experience">체험</a></li>
+                    <li><a href="#search">검색</a></li>
+                </ul>
+            </nav>
+            <ul class="topmenu">
+                <li><a href="#"><span class="desktop">로그인</span><span class="glyphicon glyphicon-log-in mobile"></span></a></li>
+                <li><a href="#"><span class="desktop">회원가입</span><span class="glyphicon glyphicon-user mobile"></span></a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="clear"></div>
+    
+    <section>
+    	<aside>
+        	<ul>
+            	<li><div class="bar bar-main red-bg"></div><a href="#main" class="bullet bullet-main" title="메인">메인</a></li>
+                <li><div class="bar bar-intro pink-bg"></div><a href="#introduction" class="bullet bullet-intro" title="소개">소개</a></li>
+                <li><div class="bar bar-rec yellow-bg"></div><a href="#recommendation" class="bullet bullet-rec" title="추천">추천</a></li>
+                <li><div class="bar bar-exp blue-bg"></div><a href="#experience" class="bullet bullet-exp" title="체험">체험</a></li>
+                <li><div class="bar bar-search mint-bg"></div><a href="#search" class="bullet bullet-search" title="검색">검색</a></li>
+            </ul>
+        </aside>
+        <div class="clear"></div>
+        
+        <article id="main">
+            <div class="c-wrap">
+                <div class="text-group">
+                    <h1>WHAT IS A <span class="red">COCKTAIL</span>?</h1>
+                    <div class="title-text">
+                        <h2>cocktails?</h2>
+                        <div class="middle-bar"></div>
+                        <h2>ABO만의 특별한 칵테일<br>만나보시죠!</h2>
+                    </div>
+                </div>
+                
+                <ul class="btn-group">
+                    <li><a href="#introduction">INTRODUCTION<div class="bg-effect"></div></a></li>
+                    <li><a href="#recommendation">RECOMMENDATION<div class="bg-effect"></div></a></li>
+                    <li><a href="#experience">EXPERIENCE<div class="bg-effect"></div></a></li>
+                    <li><a href="#search">SEARCH<div class="bg-effect"></div></a></li>
+                </ul>
+            </div>
+        </article>
+        <div class="clear"></div>
+        
+        <article id="introduction">
+        	<div class="intro-bg">
+                <div class="c-wrap">
+                    <div class="text-group no-smart">
+                        <h1>THE HISTORY OF <span class="pink">COCKTAILS</span>?</h1>
+                        <div class="title-text">
+                            <h2>cocktail history</h2>
+                            <div class="middle-bar"></div>
+                            <h2>기원전부터 시작 된 혼합음료<br>그 특별한 칵테일의 세계를 소개합니다.</h2>
+                        </div>
+                    </div>
+                    
+                    <div class="text-group smart">
+                        <h1>HISTORY'S<br><span class="pink">COCKTAIL</span></h1>
+                        <div class="title-text">
+                            <h2>history</h2>
+                            <div class="middle-bar"></div>
+                            <h2>기원전부터 시작 된<br>특별한 칵테일의 세계</h2>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="btn-direct">
+                        <span class="more">more</span>
+                        <img src="imgs/btn-direct.png" alt="화살표 이미지">
+                    </a>
+                </div>
+            </div>	
+            <div class="clear"></div>
+            
+            <div class="intro-wrap">
+                <div class="intro-row">
+                    <div class="bg intro-bgLeft-lg"><a href="#"></a></div>
+                    
+                    <div class="intro-info intro-info-left">
+                        <h3>칵테일의 유래</h3>
+                        <div class="intro-info-bar"></div>
+                        <p>수탉에 꼬리라는 말이 붙어서 생긴 단어다. 여기에는 또 전설이 붙는다.</p>
+                        <a href="#" class="btn-more">more</a>
+                    </div>
+                    
+                    <div class="bg intro-bgRight-sm"></div>
+                </div>
+                <div class="clear"></div>
+                
+                <div class="intro-row">
+                    <div class="bg intro-bgLeft-sm"></div>
+                    
+                    <div class="intro-info intro-info-right">
+                        <h3>칵테일의 장식</h3>
+                        <div class="intro-info-bar"></div>
+                        <div class="clear"></div>
+                        <p>칵테일 첨가하는 과일 장식물을 데코레이션 혹은 가니시(Garnish·고명)라고 한다.</p>
+                        <div class="clear"></div>
+                        <a href="#" class="btn-more">more</a>
+                    </div>
+                    
+                    <div class="bg intro-bgRight-lg"><a href="#"></a></div>
+                </div>
+            </div>
+        </article>
+        <div class="clear"></div>
+
+        <article id="recommendation">
+            <div class="c-wrap">
+                <div class="text-group no-smart">
+                    <h1>A GOOD <span class="yellow">COCKTAIL</span> RECIPE<br>IS ALWAYS IN SEASON</h1>
+                    <div class="title-text">
+                        <h2>recommendation</h2>
+                        <div class="middle-bar"></div>
+                        <h2>당신이 좋아할 ABO의 특별한 칵테일<br>SEASON COCKTAIL</h2>
+                    </div>
+                </div>
+                
+                <div class="text-group smart">
+                    <h1>COCKTAIL<br><span class="yellow">RECIPE</span></h1>
+                    <div class="title-text">
+                        <h2>recipie</h2>
+                        <div class="middle-bar"></div>
+                        <h2>당신만의 특별한 칵테일<br>SEASON COCKTAIL</h2>
+                    </div>
+                </div>
+                
+                <a href="#" class="btn-direct">
+                    <span class="more">more</span>
+                    <img src="imgs/btn-direct.png" alt="화살표 이미지">
+                </a>
+            </div>
+        </article>
+        <div class="clear"></div>
+        
+        <article id="experience">
+            <div class="exp-bg">
+                <div class="c-wrap">
+                    <div class="text-group no-smart">
+                        <h1>CREATE A <span class="blue">COCKTAIL</span><br>WITH THE BARTENDER</h1>
+                        <div class="title-text">
+                            <h2>with the bartender</h2>
+                            <div class="middle-bar"></div>
+                            <h2>눈으로만 보는 것은 이제 그만!<br>바에서 직접 바텐더와 함께 만들어 보세요.</h2>
+                        </div>
+                    </div>
+                    
+                     <div class="text-group smart">
+                        <h1 class="smart"><span class="blue">CREATE</span><br>COCKTAIL</h1>
+                        <div class="title-text">
+                            <h2>bartender</h2>
+                            <div class="middle-bar"></div>
+                            <h2>혼자 만들기는 그만!<br>바텐더에게 배워보세요!</h2>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="btn-direct">
+                        <span class="more">more</span>
+                        <img src="imgs/btn-direct.png" alt="화살표 이미지">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="exp-wrap">
+                <div class="exp-row">
+                    <div class="bg left"><a href="#"></a></div>
+                    <div class="exp-text">
+                        <h3>동명 라운지</h3>
+                        <p>장소 : 광주광역시 광주 동구 장동로 7<br>일시 : 2019-08-17</p>
+                    </div>
+                </div>
+                
+                <div class="exp-row">
+                    <div class="bg right"><a href="#"></a></div>
+                    <div class="exp-text">
+                        <h3>EMBER</h3>
+                        <p>장소 : 광주광역시 광주 동구 동명로 18<br>일시 : 2019-08-31</p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </article>
+        <div class="clear"></div>
+        
+        <article id="search">
+            <div class="c-wrap">
+                <div class="text-group no-smart">
+                    <h1>특별한 당신만의 <span class="mint">칵테일</span> 찾기</h1>
+                    <div class="title-text">
+                        <h2>search for cocktail</h2>
+                        <div class="middle-bar"></div>
+                        <h2>당신만의 특별한 칵테일을<br>찾아 드립니다</h2>
+                    </div>
+                </div>
+                
+                <div class="text-group smart">
+                    <h1><span class="mint">SEARCH</span><br>COCKTAIL</h1>
+                    <div class="title-text">
+                        <h2>search</h2>
+                        <div class="middle-bar"></div>
+                        <h2>당신만을 위한<br>칵테일을 찾아보세요!</h2>
+                    </div>
+                </div>
+                
+                <a href="#" class="btn-direct">
+                    <span class="more">more</span>
+                    <img src="imgs/btn-direct.png" alt="화살표 이미지">
+                </a>
+            </div>
+        </article>
+        <div class="clear"></div>
+    </section>
+    <div class="clear"></div>
+    
+    <footer>
+        <div class="ft-wrap">
+        	<div class="ft-logo"><a href="#main"><img src="imgs/ft-logo.png" alt="푸터로고"></a></div>
+            <div class="ft-info">
+                <p>서울특별시 종로구 청와대로 1 <br><span>| </span>전화번호 02-720-4800 | 팩스번호 02-720-4800</p>
+                <p>COPYRIGHT ⓒ A.B.O COCKTAILS.<br>ALL RIGHTS RESERVED.</p>
+            </div>
+            <div class="sns">
+            	<a href="#"><span class="fa fa-facebook-square over"></span></a>
+                <a href="#"><span class="fa fa-twitter-square over"></span></a>
+                <a href="#"><span class="fa fa-rss-square over"></span></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+

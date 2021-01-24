@@ -1,0 +1,173 @@
+@charset "utf-8";
+/* CSS Document */
+.wrap { width:1050px; margin:0 auto; }
+.mobile { display:none; }
+/*///// 헤더 시작 ///// */
+header { position:fixed; width:1050px; z-index:999; }
+
+.logo { position:absolute; width:130px; height:50px; margin:32px 0 0 50px; z-index:99; transition:all 0.4s ease-in; }
+.logo a img { transition:all 0.8s ease-in-out;  }
+.logo a:hover img { 
+	-moz-transform:rotate(-4deg) rotate3d(1, 0, 0, 360deg);
+	-webkit-transform:rotate(-4deg) rotate3d(1, 0, 0, 360deg);
+	-o-transform:rotate(-4deg) rotate3d(1, 0, 0, 360deg);
+	-ms-transform:rotate(-4deg) rotate3d(1, 0, 0, 360deg);
+	transform:rotate(-4deg) rotate3d(1, 0, 0, 360deg); 
+}
+
+nav .gnb { height:140px; transition:all 0.4s ease-in-out; }
+nav .gnb-bg { 
+	position:fixed; width:1050px; height:140px;
+	overflow:hidden;
+	transition:all 0.5s ease-in-out;
+	z-index:9; 
+}
+nav .gnb-bg-color { 
+	position:absolute; width:1100px; height:140px; margin-top:-33px; margin-left:-30px;  
+	background:rgba(44,44,44,0.65); 
+	transform:rotate(-2.3deg); 
+	transition:all 0.5s ease-in-out;
+}
+nav .gnb-bg-fixed{ height:100px; }
+nav .gnb-bg-color-fixed { background:rgba(44,44,44,1); transform:rotate(0deg); }
+
+
+
+
+nav .gnb ul { position:relative; height:140px; margin-left:240px; z-index:99; transition:all 0.2s ease-in; }
+nav .gnb ul li { float:left; margin-top:-9px;}
+nav .gnb ul li a{ 
+	width:140px; padding:0 20px; 
+	font-family:'BGR'; 
+ 	font-size:16px; color:#FFF; text-align:center; line-height:150px; 
+	text-shadow:1px 1px 1px #000;
+	transition:all 0.4s ease; 
+}
+nav .gnb ul li:first-child a { padding-left:0; }
+nav .gnb ul li:nth-child(3) a { width:160px; }
+nav .gnb ul li:last-child a { margin-left:-10px; width:160px; }
+nav .gnb ul li a:hover { color:#B6D971; }
+nav .gnb ul li a .line { margin:-64px 0 0 -3px; width:125px; border:1px solid #B6D971;  opacity:0; transition:all 0.6s ease;  }
+nav .gnb ul li a:hover .line { display:block; box-shadow:1px 1px 1px #000; opacity:1; }
+nav .gnb ul li:nth-child(2) a .line { width:105px; }
+
+.fixed { position:fixed; width:1050px; height:100px; z-index:8; }
+.fixed ul { margin-top:-4px; }
+.fixed .logo { margin-top:28px; }
+
+/* ///// 섹션시작 ///// */
+
+.slider { width:1050px; height:760px; overflow:hidden; }
+.slider h1 { font-family:'NSR';  font-size:70px; font-weight:300; color:#FFF; text-shadow:2px 2px 2px #000; }
+.slider p { font-family:'MTH'; font-size:23px; color:#FFF; text-shadow:2px 2px 2px #000; }
+.slider .btn { 
+	width:200px; height:70px;	
+	border:2px solid #FFF; border-radius:35px; 
+	background:rgba(0,0,0,0.4) url(../imgs/arrow.png) no-repeat 110px 30px;
+	transition:all 0.4s ease;
+}
+.slider .btn:hover { background:rgba(0,0,0,0.85) url(../imgs/arrow.png) no-repeat 120px 30px; }
+.slider .btn a.btn-text { padding-left:35px; font-family:'NSC'; font-size:20px; color:#FFF; text-align:left; line-height:60px; }
+.slider .slide1, .slider .slide2, .slider .slide3, .slider .slide4 { position:relative; width:950px; height:900px; }
+.slider .slide1 .slide-text, .slider .slide2 .slide-text, .slider .slide3 .slide-text, .slider .slide4 .slide-text { position:absolute; }
+
+.slider .slide1 { background:url(../imgs/HDslide1.jpg) no-repeat center center; }
+.slider .slide1 .slide-text h1.st1 { margin-left:340px; margin-top:210px; }
+.slider .slide1 .slide-text h1.st2 { margin-left:390px; margin-top:-10px; }
+.slider .slide1 .slide-text span { font-family:'NSEB'; color:#F26B66; }
+.slider .slide1 .slide-text > p { margin-left:345px; padding-left:10px; border-left:6px solid #F26B66; }
+.slider .slide1 .slide-text > .btn { margin-left:345px; margin-top:20px; }
+
+.slider .slide2 { background:url(../imgs/HDslide2.jpg) no-repeat center center; }
+.slider .slide2 .slide-text h1.st1 { margin-left:80px; margin-top:210px; }
+.slider .slide2 .slide-text h1.st2 { margin-left:80px; margin-top:-10px; }
+.slider .slide2 .slide-text span { font-family:'NSEB'; color:#FDC168; }
+.slider .slide2 .slide-text > p { margin-left:80px; margin-top:20px; padding-left:10px; border-left:6px solid #F26B66; }
+.slider .slide2 .slide-text > .btn { margin-left:80px; margin-top:55px; }
+
+.slider .slide3 { background:url(../imgs/HDslide3.jpg) no-repeat center center; }
+.slider .slide3 .slide-text h1.st1 { margin-left:570px; margin-top:210px; }
+.slider .slide3 .slide-text h1.st2 { margin-left:625px; margin-top:-10px; }
+.slider .slide3 .slide-text span { font-family:'NSEB'; color:#B6D971; }
+.slider .slide3 .slide-text > p { margin-left:570px; margin-top:20px; padding-left:10px; border-left:6px solid #F26B66; }
+.slider .slide3 .slide-text > .btn { margin-left:570px; margin-top:55px; }
+
+.slider .slide4 { background:url(../imgs/HDslide4.jpg) no-repeat center center; }
+.slider .slide4 .slide-text h1.st1 { margin-left:80px; margin-top:210px; }
+.slider .slide4 .slide-text h1.st2 { margin-left:140px; margin-top:-10px; }
+.slider .slide4 .slide-text span { font-family:'NSEB'; color:#FDC168; }
+.slider .slide4 .slide-text > p { margin-left:80px; margin-top:20px; padding-left:10px; border-left:6px solid #F26B66; }
+.slider .slide4 .slide-text > .btn { margin-left:80px; margin-top:55px; }
+
+
+
+
+/*///// 아티클 시작 /////*/
+article { margin-top:35px; }
+article:first-child { margin-top:100px }
+article .hover14 div figure { position:relative; width:565px; height:335px; overflow:hidden; }
+article h3 { width:490px; font-family:'BGR'; line-height:30px; font-size:30px; color:#333; }
+article .att-wrap, article .hap-wrap { width:1000px; margin:0 auto; }
+article .att-wrap .att-content, article .hap-wrap .hap-content { width:970px; margin:20px auto 0 auto; }
+article .att-wrap .att-img, article .hap-wrap .hap-img { width:590px; height:335px; }
+article .att-wrap .att-text, article .hap-wrap .hap-text { width:230px; margin:80px 0px; }
+article .att-wrap p, article .hap-wrap p { font-size:16px; font-weight:500; line-height:20px; }
+article .att-wrap .att-btn a, article .hap-wrap .hap-btn a { font-size:16px; font-weight:bold; color:#FFF; text-align:center; line-height:55px; }
+article .att-wrap .att-btn:hover+.att-point-line, article .hap-wrap .hap-btn:hover+.hap-point-line { width:225px; }
+article .att-wrap .att-btn, article .hap-wrap .hap-btn { 
+	font-family:'NG';
+	width:165px; height:54px; margin-top:55px;	
+	border-radius:10px; background:#F26B66; 
+	transition:all 0.4s ease-in;
+}
+article .att-wrap .att-point-line, article .hap-wrap .hap-point-line { 
+	width:30px; margin-top:-80px;  
+	border-bottom:2px solid #F26B66;
+	transition:width 0.4s ease-in;
+}
+
+article .att-wrap h3 { margin-left:25px; }
+article .att-wrap .att-content > div { float:left; }
+article .att-wrap .att-img { 
+	margin-left:-15px;
+	background:url(../imgs/HDart_img1.jpg) no-repeat center center, url(../imgs/HDart_shadow.png) no-repeat center center; 
+}
+article .att-wrap .att-bar { 
+	float:right; width:165px; height:340px; margin-right:-25px;
+	background:url(../imgs/HDbar_right.png) no-repeat center center, url(../imgs/HDbar_shadow.png) center center; 
+}
+.att-bg {
+	position:absolute;
+	left:50%; width:50%; height:258px; margin-top:88px;
+	background:url(../imgs/HDart_bg.jpg) repeat-x left center, url(../imgs/HDart_bg_shadow.png) repeat-x left bottom;	
+	z-index:-9;
+}
+
+article .hap-wrap h3 { margin-left:435px; }
+article .hap-wrap .hap-content.hover14 div figure { margin-left:25px; }
+article .hap-wrap .hap-content > div { float:right; }
+article .hap-wrap .hap-img { 
+	margin-right:-15px;
+	background:url(../imgs/HDart_img2.jpg) no-repeat center center, url(../imgs/HDart_shadow.png) no-repeat center center;
+}
+article .hap-wrap .hap-text { padding-left:10px; }
+article .hap-wrap .hap-bar { 
+	float:left; width:165px; height:340px; margin-left:-25px;
+	background:url(../imgs/HDbar_left.png) no-repeat center center, url(../imgs/HDbar_shadow.png) center center; 
+}
+.hap-bg {
+	position:absolute;
+	right:50%; width:50%; height:258px; margin-top:88px;
+	background:url(../imgs/HDart_bg2.jpg) repeat-x left center, url(../imgs/HDart_bg_shadow.png) repeat-x left bottom;	
+	z-index:-9;
+}
+
+/*///// 푸터시작 /////*/
+footer { 
+	margin:82px auto 0 auto; height:142px; 
+	border-top:1px solid rgba(135,135,135,0.3); border-bottom:1px solid rgba(135,135,135,0.3); 
+}
+footer .ft-wrap { width:950px; height:50px; margin:50px auto; }
+footer .ft-wrap img { float:left; width:125px; height:43px; }
+footer .ft-wrap p { float:left; width:520px; height:43px; margin-left:70px; font-size:12px; text-align:right; line-height:75px; }  
+footer .ft-wrap .sns-btn { float:right; width:135px; height:43px; }

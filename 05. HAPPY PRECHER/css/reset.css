@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+
+* { margin:0; padding:0; box-sizing:border-box; outline:none; }
+
+@font-face {
+	font-family:'BGR';
+	src:url('../fonts/Binggrae-Bold.eot');
+	src:local(' '), url('../fonts/Binggrae-Bold.woff') format('woff');
+}
+@font-face {
+	font-family:'NSEB';
+	src:url('../fonts/NanumSquareEB.eot');
+	src:local(' '), url('../fonts/NanumSquareEB.woff');
+}
+@font-face {
+	font-family:'NSR';
+	src:url(../fonts/NanumSquareR.eot);
+	src:local(' '), url(../fonts/NanumSquareR.woff);
+}
+@font-face {
+	font-family:'MTH';
+	src:url(../fonts/KoreanEMPJB.eot);
+	src:local(' '), url(../fonts/KoreanEMPJB.woff);
+}
+
+@font-face { 
+	font-family: 'Binggrae'; 
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae.woff') format('woff');
+	font-style: normal; 
+}
+@font-face {
+	font-family:'NSC';
+	src:url(../fonts/NotoSansCJKkr-Bold.eot);
+	src:local(' '), url(../fonts/NotoSansCJKkr-Bold.woff);
+}
+@font-face {
+	font-family:'NG';
+	src:url(../fonts/NanumGothic.eot);
+	src:local(' '), url(../fonts/NanumGothic.woff);
+}
+
+html { height:100%; }
+
+body { height:100%; font-family:'NG'; transition:all 0.3s ease; }
+
+.clear { clear:both; }
+
+.slider span { font-family:'Nanum Gothic', sans-serif; font-weight:bold; }
+
+a { display:block; color:#000; text-decoration:none; }
+
+ul { list-style:none; }

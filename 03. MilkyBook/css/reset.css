@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document - reset.css : 공통스타일시트 */
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+@font-face {
+	font-family:'NSR';
+	src:url(../fonts/NanumSquareRoundR.eot);
+	src:local(' '), url(../fonts/NanumSquareRoundR.woff);
+}
+@font-face {
+	font-family:'NSRB';
+	src:url(../fonts/NanumSquareRoundEB.eot);
+	src:local(' '), url(../fonts/NanumSquareRoundEB.woff);
+}
+
+ul { list-style:none; }
+a, a:hover, a:active, a:visited, a:link { text-decoration:none; outline:none; }
+.clear { clear:both; }
+
+body { 
+	font-family:'NSR', sans-serif; font-size:16px; color:#333;
+	background:#FFF;
+}
+section { transition:all 0.4s ease-in; }
+h1, h2, h3, h4, h5, h6 { font-family:'NSRB', sans-serif; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

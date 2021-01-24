@@ -1,0 +1,302 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Milky Book</title>
+<link rel="stylesheet" href="fontAwesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="flexSlider/flexslider.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/desktop.css" media="screen and (min-width:1350px)">
+<link rel="stylesheet" href="css/tablet-pro.css" media="screen and (min-width:1050px) and (max-width:1349px)">
+<link rel="stylesheet" href="css/tablet.css" media="screen and (min-width:700px) and (max-width:1049px)">
+<link rel="stylesheet" href="css/smart.css" media="screen and (max-width:699px)">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="flexSlider/jquery.flexslider-min.js"></script>
+<script>
+	$(document).ready(function(e) {
+		// Dropdown Menu : start
+		// 메인메뉴에 마우스가 오버 했을 때
+		$('#main-menu li').mouseover(function( ) { 
+			$(this).find('#sub-menu').stop( ).slideDown( );
+		});
+		/*this는 #main-menu li 이다. 근데 메인 메뉴는 4개가 있다.
+		그래서 현재 마우스 오버한 메인메뉴를 this(현재 실행중인 객체)라고 한다.
+		$(this) : 사용자가 마우스 오버한 메인 메뉴이다.
+		find('선택자') : 선택자에 해당하는 요소(시작태그+웹콘텐츠+끝태그)를 찾는 메소드이다. find('#sub-menu') : 서브 메뉴 전체를 찾는다.*/
+		// 메인메뉴에서 마우스가 벗어났을 때
+		$('#main-menu li').mouseleave(function( ) { 
+			$(this).find('#sub-menu').stop( ).slideUp( );
+		});
+		// Dropdown Menu : end
+		
+		$('#trigger').click(function( ) { 
+			$('#mainMenu').slideToggle( );
+		});
+		$('#mainMenu li').click(function( ) {
+			$(this).find('#subMenu').slideToggle( );
+		});		
+		
+		$('.flexslider').flexslider({ animation:"slide" }); // Flex Slider
+		
+		// scroll( ) 메서드는 사용자가 마우스 스크롤을 했을 때 반응하는 이벤트 연결 메서드이다. 만약 사용자가 웹 브라우저에서 55픽셀 이상 아래쪽으로 스크롤 했을 때 새로운 헤더를 보여준다.
+		$(window).scroll(function( ) { 
+			if($(this).scrollTop( ) > 55) { // 55픽셀 이상 스크롤했을 때
+				$('header.hd').css('margin-top', '-55px');
+				$('header.hd-desktop-fixed').css('margin-top', '0px');				
+			}else {
+				$('header.hd').css('margin-top', '0px');
+				$('header.hd-desktop-fixed').css('margin-top', '-55px');	
+			}
+		});
+    });
+</script>
+</head>
+
+<body>
+	<header class="hd">
+    	<div class="hd-wrap hd-desktop">
+        	<div class="logo"><a href="index.html"><img src="imgs/logo.png" alt="밀키북 로고"></a></div>
+            <nav>
+            	<ul id="main-menu">
+                	<li><a href="#">소개</a>
+                    	<ul id="sub-menu">
+                            <li><a href="#">밀키북?</a></li>
+                            <li><a href="#">오시는길</a></li>                            
+                        </ul>
+                    </li>
+                    <li><a href="#">우주여행안내</a>
+                    	<ul id="sub-menu">
+                            <li><a href="#">화성 여행</a></li>
+                            <li><a href="#">금성 여행</a></li>
+                            <li><a href="#">토성 여행</a></li>
+                            <li><a href="#">목성 여행</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">별자리</a></li>
+                    <li><a href="#">별마루천문대</a></li>                    
+                </ul>
+            </nav>
+            <ul class="topmenu">
+            	<li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+        </div>
+        
+        <div class="hd-wrap hd-mobile">
+        	<ul class="topmenu">
+            	<li><a href="#"><span class="glyphicon glyphicon-log-in"></span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
+            </ul>
+        	<div class="logo"><a href="index.html"><img src="imgs/logo.png" alt="밀키북 로고"></a></div>
+            <nav>
+            	<a href="#" id="trigger"></a>
+            	<ul id="mainMenu">
+                	<li><a href="#">소개</a>
+                    	<ul id="subMenu">
+                            <li><a href="#">밀키북?</a></li>
+                            <li><a href="#">오시는길</a></li>                            
+                        </ul>
+                    </li>
+                    <li><a href="#">우주여행안내</a>
+                    	<ul id="subMenu">
+                            <li><a href="#">화성 여행</a></li>
+                            <li><a href="#">금성 여행</a></li>
+                            <li><a href="#">토성 여행</a></li>
+                            <li><a href="#">목성 여행</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">별자리</a></li>
+                    <li><a href="#">별마루천문대</a></li>
+                </ul>
+            </nav>            
+        </div>
+    </header>
+    <div class="clear"></div>
+    
+    <header class="hd-desktop-fixed">
+    	<div class="hd-wrap hd-desktop">
+        	<div class="logo"><a href="index.html"><img src="imgs/logo.png" alt="밀키북 로고"></a></div>
+            <nav>
+            	<ul id="main-menu">
+                	<li><a href="#">소개</a>
+                    	<ul id="sub-menu">
+                            <li><a href="#">밀키북?</a></li>
+                            <li><a href="#">오시는길</a></li>                            
+                        </ul>
+                    </li>
+                    <li><a href="#">우주여행안내</a>
+                    	<ul id="sub-menu">
+                            <li><a href="#">화성 여행</a></li>
+                            <li><a href="#">금성 여행</a></li>
+                            <li><a href="#">토성 여행</a></li>
+                            <li><a href="#">목성 여행</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">별자리</a></li>
+                    <li><a href="#">별마루천문대</a></li>                    
+                </ul>
+            </nav>
+            <ul class="topmenu">
+            	<li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+        </div>
+        
+        <div class="hd-wrap hd-mobile">
+        	<div class="logo"><a href="index.html"><img src="imgs/logo.png" alt="밀키북 로고"></a></div>
+            <nav>
+            	<a href="#" id="trigger"></a>
+            	<ul id="mainMenu">
+                	<li><a href="#">소개</a>
+                    	<ul id="subMenu">
+                            <li><a href="#">밀키북?</a></li>
+                            <li><a href="#">오시는길</a></li>                            
+                        </ul>
+                    </li>
+                    <li><a href="#">우주여행안내</a>
+                    	<ul id="subMenu">
+                            <li><a href="#">화성 여행</a></li>
+                            <li><a href="#">금성 여행</a></li>
+                            <li><a href="#">토성 여행</a></li>
+                            <li><a href="#">목성 여행</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">별자리</a></li>
+                    <li><a href="#">별마루천문대</a></li>
+                </ul>
+            </nav>
+            <ul class="topmenu">
+            	<li><a href="#"><span class="glyphicon glyphicon-log-in"></span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="clear"></div>
+    
+    <section>
+    	<div class="flexslider desktop">
+        	<ul class="slides">
+            	<li>
+                	<div class="slide-text">
+                        <h2>start space travel</h2>
+                        <p>밀키북과 함께 우주의 신비한 곳으로 여행해요.<br>우주의 새로운 매력에 매료될겁니다.</p>
+                    </div>
+                	<img src="imgs/slide1.jpg" alt="우주여행을 시작해요">
+                </li>
+                <li>
+                	<div class="slide-text">
+                        <h2>byeolmaro observatory</h2>
+                        <p>영월, 별마로천문대는 봉래산에 자리하고 있다.<br>
+                        캄캄한 밤하늘에 아름다운 별들의 모습이 보인다.</p>
+                    </div>
+                	<img src="imgs/slide2.jpg" alt="별마로 천문대">
+                </li>
+            </ul>
+        </div>
+        
+        <div class="flexslider mobile-tb">
+        	<ul class="slides">
+            	<li>
+                	<div class="slide-text">
+                        <h2>start space travel</h2>
+                        <p>밀키북과 함께 우주의 신비한 곳으로 여행해요.<br>
+                        우주의 새로운 매력에 매료될겁니다.</p>
+                    </div>
+                	<img src="imgs/slide1-tb.jpg" alt="우주여행을 시작해요">
+                </li>
+                <li>
+                	<div class="slide-text">
+                        <h2>byeolmaro observatory</h2>
+                        <p>영월, 별마로천문대는 봉래산에 자리하고 있다.<br>
+                        캄캄한 밤하늘에 아름다운 별들의 모습이 보인다.</p>
+                    </div>
+                	<img src="imgs/slide2-tb.jpg" alt="별마로 천문대">
+                </li>
+            </ul>
+        </div>
+        
+        <div class="flexslider mobile-sm">
+        	<ul class="slides">
+            	<li>                	
+                	<div class="slide-text">
+                        <h2>start space travel</h2>
+                        <p>밀키북과 함께 우주의 신비한 곳으로 여행해요.<br>우주의 새로운 매력에 매료될겁니다.</p>
+                    </div> 
+                    <img src="imgs/slide1-sm.jpg" alt="우주여행을 시작해요">               	
+                </li>
+                <li>                	
+                	<div class="slide-text">
+                        <h2>byeolmaro observatory</h2>
+                        <p>영월, 별마로천문대는 봉래산에 자리하고 있다.<br>
+                        캄캄한 밤하늘에 아름다운 별들의 모습이 보인다.</p>
+                    </div>  
+                    <img src="imgs/slide2-sm.jpg" alt="별마로 천문대">              	
+                </li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+        
+        <article>
+        	<div>
+            	<h3>Space travel</h3>
+                <img src="imgs/mc1.jpg" alt="우주여행">
+                <p>경이로운 우주 여행...  앞으로 먼 미래에 우주를 탐험 할 수 있는 날이 옵니다! 사전예약하러 가볼까요?</p>
+            </div>
+            <div>
+            	<h3>Galaxy</h3>
+                <img src="imgs/mc2.jpg" alt="우주여행">
+                <p>20세기 초까지만 해도 사람들은 우리 은하계가 우주의 전부라고 생각했다.당시의 망원경은 지금 보다 ... </p>
+            </div>
+            <div>
+            	<h3>Earth</h3>
+                <img src="imgs/mc3.jpg" alt="우주여행">
+                <p>지구는 우주에서 봤을 때 푸른색의 바다와 녹색의 산, 갈색의 흙에 흰색의 구름이 조화를 이루고 있는 아름다운 행성이다.</p>
+            </div>
+            <div>
+            	<h3>Astronomy</h3>
+                <img src="imgs/mc4.jpg" alt="우주여행">
+                <p>최상의 관측조건인 해발 799.8m 봉래산 정상에 자리하고 있으며, 지름 80cm 주망원경과 여러대의 ...</p>
+            </div>
+        </article>
+        <div class="clear"></div>
+    </section>    
+    
+    <footer>
+    	<div class="ft-wrap">
+        	<div class="ft-logo"><img src="imgs/ft-logo.png"></div>
+            <div class="ft-info">
+            	<p>광주광역시 동구 무등로 339 (구: 계림동 558-7번지) | TEL : 062)605-8000,8008(홍보실) 8031(행정실) | FAX : 062)605-8015(홍보실)</p>
+                <p>Copyright &copy; 2019 Milky Book, All Rights Reserved.</p>
+            </div>
+            <div class="sns">
+            	<a href="#"><span class="fa fa-facebook-square over"></span></a>
+                <a href="#"><span class="fa fa-twitter-square over"></span></a>
+                <a href="#"><span class="fa fa-rss-square over"></span></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

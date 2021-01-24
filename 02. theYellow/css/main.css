@@ -1,0 +1,174 @@
+@charset "utf-8";
+/* CSS Document */
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+@font-face {
+	font-family:'Lucida';
+	src:url(../fonts/LucidaBrightDemiItalic.eot);
+	src:local(' '), url(../fonts/LucidaBrightDemiItalic.woff) format('woff');
+}
+@font-face {
+	font-family:'NG';
+	src:url(../fonts/nanum.eot);
+	src:local(' '), url(../fonts/nanum.woff) format('woff');
+}
+@font-face {
+	font-family:'Mangal';
+	src:url(../fonts/mangal.eot);
+	src:local(' '), url(../fonts/mangal.woff) format('woff');
+}
+
+.clear { clear:both; }
+a { display:block; text-decoration:none; }
+a:active, a:focus, img { border:none; outline:none; }
+/* 링크된 이미지를 클릭할 때 점선이 생기는 데 이를 제거한다. */
+ul { list-style:none; }
+
+body {
+	font-family:'NG', serif; font-size:16px; color:#333;
+	background:#303030 url(../imgs/wrap_line.png) repeat-y center top;
+}
+.wrap { width:1000px; margin:0 auto; }
+
+
+
+
+
+/*///// header:start /////*/
+header {
+	position:fixed; width:1000px; height:100px;
+	background:#141414;
+}
+.logo { float:left; width:280px; padding:25px 0 0 50px; }
+nav { float:right; padding:55px 50px 0 0; }
+nav ul li { float:left; }
+nav ul li a {
+	font-family:'Lucida'; color:#FFF; padding:0 19px; 
+	text-transform:capitalize;
+}
+nav ul li a:hover { color:#FFCB06; }
+/*///// header:end /////*/
+
+
+
+/*///// aboutus:start /////*/
+#aboutus {
+	height:900px; padding:100px 25px 0 25px;
+	background:#141414;
+}
+.about-video { height:290px; margin-top:60px; background:#000; }
+.about-front {
+	height:340px;
+	background:url(../imgs/about_bg.png) no-repeat center center;
+}
+.about-front > p {
+	padding-top:70px;
+	color:#F2F2F2; text-align:center;
+}
+.about-front > p span.at, .about-front > h1 span.at { color:#FFCA09; }
+.about-front h1 {
+	padding-top:40px;
+	font-family:'Mangal'; font-size:52px; color:#F2F2F2;
+	text-align:center; text-transform:uppercase;
+	line-height:44px; letter-spacing:-2px;
+}
+.about-front .about-text { margin-top:100px; }
+.about-front .about-text h2 {
+	float:left; width:150px;
+	font-size:24px; color:#FFCA09; text-transform:capitalize;
+}
+.about-front .about-text p {
+	float:right; width:700px;
+	font-size:12px; color:#E8E8E8; text-align:left; line-height:12px;
+}
+/*///// aboutus:end /////*/
+
+
+
+/*///// 서브페이지 타이틀 공통 스타일시트:시작 /////*/
+.sub-bg-eq { width:100%; height:100px; background:#141414; }
+.sub-bg-mv { width:100%; height:100px; background:#FFF; }
+.sub-bg-vd { width:100%; height:100px; background:#FC0; }
+.sub-bg-ph { width:100%; height:100px; background:#141414; }
+.sub-container { padding:0 50px; }
+.sub-title { margin-top:50px; }
+.sub-title img { float:left; }
+.sub-title h1 {
+	float:left; padding-left:10px;
+	font-family:'Lucida'; font-size:48px; color:#371D00;
+	text-transform:capitalize; line-height:46px;
+}
+.sub-title h2 { float:left; padding:20px 0 0 10px; font-size:18px; }
+/*///// 서브페이지 타이틀 공통 스타일시트:끝 /////*/
+
+
+
+/*///// equipment:start /////*/
+#equipment { height:750px; background:#FFF; }
+.camera { margin-top:100px; }
+.camera > img { float:left; }
+.camera .camera-info { float:right; margin:120px 0 0 50px; }
+.camera-info table {
+	margin-top:20px;
+	font-size:13px; border:0;
+}
+.camera-info table td { height:25px; color:#888; }
+.camera-info table .ft { width:90px; }
+/*///// equipment:end /////*/
+
+
+
+/*///// movie:start /////*/
+#movie { 
+	height:1200px;
+	background:#FC0 url(../imgs/BabyPropose.png) no-repeat 90px 20px;	
+}
+.movie-info { margin-top:550px; }
+.movie-info p { color:#330; height:30px; }
+.movie-info p:last-child { line-height:22px; }
+/*///// movie:end /////*/
+
+
+
+/*///// video:start /////*/
+#video { height:1400px; background:#FFF; }
+.fv { height:550px; background:#FFF url(../imgs/baby_v.png) no-repeat right top; }
+.fv-text { padding:180px 0 0 50px; }
+.fv-text h1, .fv-text h3, .sv-text h1, .sv-text h3 { font-family:Arial, serif; }
+.fv-text h1, .sv-text h1 { 
+	font-size:36px; color:#666;
+	letter-spacing:-2px; word-spacing:-3px;
+}
+.fv-text h1 .fv-a, .sv-text h1 .sv-a { color:#FC0; }
+.fv-text h3, .sv-text h3 {
+	margin-top:-15px;
+	font-size:50px;
+	text-transform:capitalize; letter-spacing:-3px; word-spacing:-5px;
+}
+.fv-text p, .sv-text p { padding-top:15px; }
+.fv-text p { width:280px; }
+
+.sv { 
+	height:490px; 
+	background:#FFF url(../imgs/wedding_v.png) no-repeat -25px top; }
+.sv-text { padding:120px 0 0 450px; }
+.sv-text p { float:right; width:290px; text-align:right; }
+/*///// video:end /////*/
+
+
+
+
+
+
+footer { height:100px; text-align:center; line-height:100px; }
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+@font-face {
+	font-family:'SHEB';
+	src:url(../fonts/SeoulHangangEB.eot);
+	src:local(''), url(../fonts/SeoulHangangEB.woff) format('woff');
+}
+@font-face {
+	font-family:'SHB';
+	src:url(../fonts/SeoulHangangB.eot);
+	src:local(''), url(../fonts/SeoulHangangB.woff) format('woff');
+}
+@font-face {
+	font-family:'SHL';
+	src:url(../fonts/SeoulHangangL.eot);
+	src:local(''), url(../fonts/SeoulHangangL.woff) format('woff');
+}
+@font-face {
+	font-family:'NSR';
+	src:url(../fonts/NanumSquareR.eot);
+	src:local(''), url(../fonts/NanumSquareR.woff) format('woff');
+}
+
+
+body { font-family:'NSR'; font-size:16px; color:#F8F8F8; background:#000; }
+
+ul { list-style:none; }
+a, a:hover, a:active, a:visited, a:link { display:block; color:#F8F8F8; text-decoration:none; outline:none; }
+.clear { clear:both; }
+img { border:none; outline:none; }
+
+section { transition:all 0.4s ease-in; }
+h1, h2, h3, h4, h5, h6 { font-family:'SHEB'; margin:0px; }
+
+.red { color:#F00; }
+.pink { color:#FE00F5; }
+.yellow { color:#FCCB4F; }
+.blue { color:#009CFF; }
+.mint { color:#4FFCE6; }
+
+.red-bg { background:#F00; }
+.pink-bg { background:#FE00F5; }
+.yellow-bg { background:#FCCB4F; }
+.blue-bg { background:#009CFF; }
+.mint-bg { background:#4FFCE6; }

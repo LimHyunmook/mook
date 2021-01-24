@@ -1,0 +1,126 @@
+@charset "utf-8";
+/* CSS Document - tablet.css : 700픽셀 이상 1049픽셀 이하 */
+
+.hd-desktop { display:none; }
+.desktop, .mobile-sm, .hd-desktop-fixed { display:none; }
+
+
+
+/*////////// 헤더:시작 //////////*/
+header { width:100%; height:50px; background:#FFF; }
+.hd-wrap {
+	width:100%; height:50px; padding-right:20px;
+}
+.logo { 
+	position:absolute; left:50%; top:10px;
+	width:164px; height:35px; margin-left:-82px;
+}
+
+
+nav { width:100%; height:50px; }
+nav #trigger {
+	display:block; float:right; width:44px; height:34px; margin-top:8px;
+	background:url(../imgs/trigger-btn.png) no-repeat center center;
+}
+nav ul#mainMenu {
+	display:none;
+	position:absolute; right:0; top:50px; width:60%; z-index:99;
+}
+nav ul#mainMenu > li { float:none; display:block; }
+nav ul#mainMenu > li > a {
+	display:block; width:100%; height:50px;
+	color:#E8E8E8; line-height:50px; text-indent:20px;
+	background:rgba(0,0,0,0.75);
+	border-bottom:1px solid #576979;
+}
+nav ul#mainMenu > li > a:hover { background:rgba(0,85,185,0.75); }
+nav ul#subMenu { display:none; width:100%; }
+nav ul#subMenu li { float:none; width:100%; height:40px; background:rgba(0,0,20,0.7); }
+nav ul#subMenu li a {
+	display:block; width:100%; height:40px; padding:0 40px 0 20px;
+	color:#FFF; line-height:40px; text-indent:40px;
+}
+nav ul#subMenu li a:hover { color:#6CF; background:rgba(0,0,30,0.7); }
+
+
+
+ul.topmenu { position:absolute; left:10px; top:10px; }
+ul.topmenu li { float:left; }
+ul.topmenu li a { 
+	display:block; padding:0 10px;
+	font-size:24px; color:#999;
+}
+ul.topmenu li a:hover { color:#0068B7; }
+/*////////// 헤더:끝 //////////*/
+
+
+
+
+
+/*////////// 슬라이더:시작 //////////*/
+.flexslider .slide-text { position:absolute; width:100%; height:500px; }
+.flexslider .slide-text h2, .flexslider .slide-text p {
+	position:absolute; margin-left:80px; color:#FFF;	
+}
+.flexslider .slide-text h2 {
+	margin-top:140px;
+	font-size:42px; text-shadow:2px 2px 4px #000;
+	text-transform:uppercase;
+}
+.flexslider .slide-text p { 	margin-top:190px; text-shadow:1px 1px 1px #000; }
+/*////////// 슬라이더:끝 //////////*/
+
+
+
+
+
+/*////////// 아티클:시작 //////////*/
+article { width:100%; margin:80px auto; }
+article div { 
+	float:left; width:50%; padding:0 30px;
+	border-right:1px solid #666;
+}
+article div:nth-child(2), article div:last-child { border:none; }
+article div:nth-child(3), article div:last-child { margin-top:30px; }
+article h3 { font-size:28px; color:#06F; }
+article img { width:100%; margin-top:10px; }
+article p { margin-top:20px; }
+/*////////// 아티클:끝 //////////*/
+
+
+
+
+
+/*////////// 푸터:시작 //////////*/
+footer { height:300px; margin-top:100px; background:#02214F; }
+.ft-wrap { width:100%; margin:0 auto; padding:50px 30px; }
+.ft-wrap .ft-logo { text-align:center; }
+.ft-wrap .ft-info { 
+	width:75%; margin:30px auto 0 auto;
+	font-size:12px; color:#F4F4F4; text-align:center;
+}
+.ft-wrap .ft-info p { line-height:14px; }
+.ft-wrap .sns { width:130px; margin:30px auto; }
+.ft-wrap .sns a {
+	display:block; float:left; padding-left:15px;
+	font-size:32px; color:#6F9;
+}
+.ft-wrap .sns a:hover { color:#FFF; }
+/*////////// 푸터:끝 //////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

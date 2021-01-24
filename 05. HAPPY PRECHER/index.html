@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- 
+firefox브라우저에서는 빙그레 서체의 적용이 되지않아 폰트가 깨지는 현상이 나타나므로 다른 브라우저를 사용해주세요.
+
+현재 시안의 gnb가 변화시 로고에 오타가 있어서 변화전 로고이미지로 통일하여 제작하였습니다.
+
+데스크탑 영역(FHD,HD)의 로고에 gnb의 대각선의 느낌을 주기위해 로테이트와 로테이트3d함수를 이용하여 마우스 오버시 로고가 돌아가며 비스듬해지는
+느낌을 연출했습니다. 그리고 gnb의 메뉴들의 위치를 시안과 달리 로고의 밑부분의 위치에 맞추는 것으로 변경했습니다.
+
+HD시안의 슬라이드 이미지가 4:3비율에 맞지않아 태블릿 시안과 동일한 크기의 슬라이드로 변경하였으며 변경함에 따라 텍스트들의 위치도 모두 1번슬라이드 텍스트의 높이에 맞춰 통일하였습니다. 그리고 HD영역의 슬라이드 이미지 more 버튼의 시안이 1번 슬라이드와 2,3,4번 슬라이드의 버튼 크기가 다르게 되어있어서 시안과달리 2,3,4번의 크기로 1번슬라이드의 버튼도 통일 시켰습니다.
+또한 HD시안의 1번슬라이드의 텍스트는 2,3,4번과 텍스트간의 여백이 다른데 그 이유는 그림자크기안에 컨텐츠를 집어넣기 위해 줄인것입니다.
+
+푸터의 sns버튼은 시안의 컬러풀한 이미지 대신 푸터의 흑백 느낌을 주기위해 푸터로고와 같은색상을 사용하여 제작 하였으며
+사용자의 궁금증을 유발하게끔 버튼들을 숨겨놓고 SNS라는 단어로 이버튼이 SNS버튼이라는것만 인지하게끔 하고
+마우스 오버시 사용자가 집중할수 있게끔 박스의 스케일을 키우고 덮어져있는 박스를 왼쪽으로 넘기고 시간차를 두고
+sns버튼들이 나오는 애니메이션 효과를 주었습니다.
+
+모바일 영역(태블릿, 스마트폰)의 슬라이드 이미지의 텍스트들은 시안에서 어떤곳은 중앙 어떤곳은 왼쪽정렬로 서로 통일되지않아서 모두 중앙정렬로 통일하였습니다.
+
+태블릿 영역의 아티클 부분의 이미지를 시안의 이미지대로 사용하게되면 디바이스의 가로길이가 줄어듬에따라 텍스트의 공간이
+너무 줄어들기때문에 임의로 이미지크기를 줄여서 사용하였습니다.
+
+스마트폰 영역의 슬라이드 1번과 2번 텍스트를 시안과 달리 1번높이의 위치로 통일시켰습니다.
+
+폰트 크기나 버튼 크기,위치 같은경우 시안에서 비정상적으로 크거나 작고 통일되지 않는 느낌을 주는부분은 크기와 위치를 자연스럽게 조정하였습니다.
+ -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="imgs/pavicon.png">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/btn.css"> <!-- 버튼 애니메이션 효과에 필요한 css 입니다. -->
+<link rel="stylesheet" href="css/fhd.css" media="screen and (min-width:1600px)" >
+<link rel="stylesheet" href="css/hd.css" media="screen and (max-width:1599px) and (min-width:1050px)">
+<link rel="stylesheet" href="css/tablet.css" media="screen and (max-width:1049px) and (min-width:600px)">
+<link rel="stylesheet" href="css/smart.css" media="screen and (max-width:599px)">
+<link rel="stylesheet" type="text/css" href="css/slick.css">
+<link rel="stylesheet" type="text/css" href="css/slick-theme.css" media="screen and (min-width:1050px)">
+<link rel="stylesheet" type="text/css" href="css/slick-theme_smart.css" media="screen and (max-width:1049px)">
+<link rel="stylesheet" type="text/css" href="css/animate.css"><!-- 아티클의 애니메이션 효과 플러그인에 필요한 css입니다. -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap&subset=korean" rel="stylesheet">
+<title>HAPPY PRECHER</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script src="js/slick.js"></script>
+<script src="js/scrolla.jquery.js"></script><!-- 아티클의 애니메이션 효과 플러그인입니다. -->
+<script>
+	$(window).scroll(function(){
+		if($(this).scrollTop() > 140){ // 스크롤시 gnb배경 변화 스크립트
+			$('.gnb-bg').addClass('gnb-bg-fixed');
+			$('.gnb-bg-color').addClass('gnb-bg-color-fixed');
+			$('header').addClass('fixed'); 
+		}else {
+			$('.gnb-bg').removeClass('gnb-bg-fixed');
+			$('.gnb-bg-color').removeClass('gnb-bg-color-fixed');
+			$('header').removeClass('fixed');						
+		}				
+	});
+	
+	$(document).ready(function(e) { // slick 슬라이더 플러그인
+		$(".slider").slick({
+			  speed:500,
+			  autoplay: true,
+			  autoplaySpeed:2000,
+		});		
+		$('.animated').scrolla(); // 아티클 애니메이션 scrolla 플러그인
+		  
+		$('#hb-btn').click(function( ) {  // 햄버거 버튼 클릭이벤트
+			$('#mainMenu').stop().slideToggle( );
+			$('#hb-btn').hide();
+			$('#hb-close').show();		
+		});
+		$('#hb-close').click(function( ) { // 햄버거 x(close)버튼 클릭이벤트
+			$('#mainMenu').stop().slideToggle( );
+			$('#hb-btn').show();
+			$('#hb-close').hide();
+		});			
+    });
+</script> 
+</head>
+
+<body>	
+	<div class="wrap">
+        <header>
+            <div class="logo"><a href="index.html"><img src="imgs/logo.png" alt="로고"></a></div> <!-- 데스크탑 영역 로고박스  -->
+            <div class="mobile"> <!-- 모바일 영역 심볼마크/햄버거버튼 박스 -->
+            	<div class="simbol"><a href="index.html"><img src="imgs/simbol.png" alt="심볼마크"></a></div>
+                <a id="hb-btn" class="hb-btn" href="#"></a>
+                <a id="hb-close" class="hb-close" href="#"></a>
+            </div> 	
+            <nav>
+                <div class="gnb desktop"><!-- 데스크탑 gnb -->
+                    <div class="gnb-bg"><div class="gnb-bg-color"></div></div><!-- gnb에 fixed를 주게되면 overflow:hidden속성이 적용되지않기때문에 이중으로 박스를 만들어 부모박스에 fixed와 overflow속성을 주고 자식박스에 배경색과 로테이트효과를 주어 gnb의 배경을 표현 -->         
+                    <ul>
+                        <li><a href="#">유기견 문제 소개<div class="line"></div></a></li><!-- div class="line"박스는 사용자가 메뉴를 hover했을때 메뉴의 밑줄이 생기는것을 연출하기위한 박스이며, text-decoration 속성과 border-bottom을 이용하였을때에는 선의 위치를 세밀하게 조정할수 없고 트랜지션을 따로줄수 없기때문에 시간차효과를 주기위해 박스를 추가하여 제작 -->
+                        <li><a href="#">봉사방법 소개<div class="line"></div></a></li>
+                        <li><a href="#">보호소 위치 검색<div class="line"></div></a></li>
+                        <li><a href="#">봉사후기 게시판<div class="line"></div></a></li>                
+                    </ul>
+                </div>
+                <div class="gnb mobile"><!-- 모바일 gnb 햄버거 버튼으로 인해 데스크탑영역으로 넘어갈시에 gnb가 사라지는 현상을 해결하기 위하여 모바일영역 gnb를 추가 하였습니다. -->            	
+                    <div class="gnb-bg"><div class="gnb-bg-color"></div></div>                
+                    <ul id="mainMenu">
+                        <li><a href="#">유기견 문제 소개</a></li>
+                        <li><a href="#">봉사방법 소개</a></li>
+                        <li><a href="#">보호소 위치 검색</a></li>
+                        <li><a href="#">봉사후기 게시판</a></li>                
+                    </ul>
+                </div>
+            </nav>
+        </header>        
+    	<div class="clear"></div>  
+        
+        <div class="slider"><!-- slick슬라이더 플러그인을 이용하여 슬라이드 구현 -->
+            <div class="slide1">
+                <div class="slide-text">
+                    <h1 class="st1">인형이 아닙니다.</h1><h1 class="st2">살아있는 <span>생명</span>입니다.</h1>                        
+                    <p>한해 평균 몇 마리의 유기견이 발생할까요...?</p>
+                    <div class="btn"><a class="btn-text" href="#">more</a></div>
+                </div>
+         	</div>
+            <div class="slide2">
+                <div class="slide-text">
+                    <h1 class="st1"><span>행복</span>을</h1><h1 class="st2">선물하세요.</h1>
+                    <p>유기견 봉사활동은 어떻게 시작해야<br>할까요?</p>	
+                    <div class="btn"><a class="btn-text" href="#">more</a></div>
+                </div>
+            </div>
+            <div class="slide3">
+                <div class="slide-text">
+                    <h1 class="st1"><span>지금 바로</span></h1><h1 class="st2">보호소 찾기!</h1>
+                    <p>우리 지역에서 가장 가까운 보호소가<br>어디에 있을까요?</p>		
+                    <div class="btn"><a class="btn-text" href="#">more</a></div>
+                </div>
+            </div>
+            <div class="slide4">
+                <div class="slide-text">
+                    <h1 class="st1"><span>행복</span>을</h1><h1 class="st2">널리 알려요.</h1>
+                    <p>봉사하는 행복한 모습이 궁금하신가요?</p>	
+                    <div class="btn"><a class="btn-text" href="#">more</a></div>
+                </div>
+            </div>	
+        </div>
+    </div> <!-- wrap End -->
+    <div class="clear"></div>
+    
+ 	<section>
+    	<article>            
+        	<div class="att-bg animated" data-animate="fadeInRight" data-duration="1s" data-delay="0.5s" data-offset="0"></div><!-- att=관심의 영단어를 줄인단어, 데스크탑영역에서 배경을 가두지않고 밖으로 나오게 하기위해 wrap으로 감싸지않음 -->   
+            <div class="att-wrap" ><!-- 배경외의 컨텐츠들을 가두기위한 박스 -->
+                <h3>더 많은 관심이 필요한 유기견</h3>
+                <div class="att-content hover14">       
+                    <div class="att-img animated" data-animate="fadeIn" data-duration="1s" data-delay="0.5s" data-offset="0"><figure></figure><!-- 이미지에 hover시 shine효과를 주기위한 박스 --></div>
+                    <div class="att-text animated" data-animate="fadeIn" data-duration="1s" data-delay="1.2s" data-offset="0">                          
+                        <p>현재 많은 유기견보호소의 유기견들은 일손이 부족하여 제대로 관리받지 못하고 있습니다.</p>                    
+                        <div class="att-btn"><a href="" class="button">자세히 보기</a></div>
+                        <div class="att-point-line"></div>                    
+                    </div>
+                    <div class="att-bar animated" data-animate="fadeInUp" data-duration="1s" data-delay="0.5s" data-offset="0"></div>    
+                </div>
+            </div>                                   
+        </article>
+        <div class="clear"></div>
+        
+        <article>            
+            <div class="hap-bg animated" data-animate="fadeInLeft" data-duration="1s" data-delay="0.7s" data-offset="0"></div><!-- hap=행복의 영단어를 줄인단어 att컨텐츠와 hap컨텐츠의 위치가 비대칭이기때문에 서로 다른이름을 주어 코딩 -->           
+            <div class="hap-wrap"> 
+                <h3>행복 나누기, 어렵지 않아요.</h3> 
+                <div class="hap-content hover14">           	
+                    <div class="hap-img animated" data-animate="fadeIn" data-duration="1s" data-delay="0.7s" data-offset="0"><figure></figure></div>   
+                    <div class="hap-text animated" data-animate="fadeIn" data-duration="1s" data-delay="1.2s" data-offset="0">                          
+                        <p>유기견 봉사방법과  절차, 그리고 어떤 일을 하는지 봉사 절차와 방법에 대한 정보를 제공해드립니다.</p>                    
+                        <div class="hap-btn"><a href="" class="button">자세히 보기</a></div>
+                        <div class="hap-point-line"></div>                  
+                    </div>
+                    <div class="hap-bar animated" data-animate="fadeInUp" data-duration="1s" data-delay="0.7s" data-offset="0"></div>  
+                </div>          
+            </div>                                       
+        </article> 
+    </section>
+    <div class="clear"></div>
+   
+    <footer>
+    	<div class="ft-wrap">
+            <a href="index.html"><img src="imgs/ft-logo.png" alt="푸터로고"></a>
+            <p>광주광역시 북구 경양로 758 | 전화번호 062-720-4800 | 팩스번호 062-720-4822 | copyright 2019</p>
+            <div class="sns-btn"> <!-- 디바이스별로 위치와 박스 사이즈를 잡기위한 박스 -->
+            	<div class="btn_wrap"> <!-- sns 버튼을 덮는 박스  -->
+                    <span class="sns">SNS</span>
+                    <div class="container"> <!-- sns 버튼들을 가둔박스 -->
+                        <i class="fab fa-instagram "><a class="sns-btn-box" href="https://www.instagram.com"></a></i> <!-- 아이콘요소이므로 i태그를 사용하였습니다. -->
+                        <i class="fab fa-facebook-f"><a class="sns-btn-box" href="https://www.facebook.com"></a></i>
+                        <i class="fab fa-twitter"><a class="sns-btn-box" href="https://www.twitter.com"></a></i>
+        			</div>
+    			</div>
+            </div>
+        </div>
+    </footer>    
+</body>
+</html>

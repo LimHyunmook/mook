@@ -1,0 +1,62 @@
+/* Basic jQuery Slider essential styles */
+/* Basic jQuery Slider 전체를 감싸는 부모 박스 */
+ul.bjqs { 
+	display:none; position:relative; margin:0; padding:0; 
+	list-style:none; overflow:hidden; 
+}
+li.bjqs-slide { display:none; position:absolute; }
+
+/* Prev, Next 버튼의 부모 박스 */
+ul.bjqs-controls {	
+	position:relative; margin-top:-496px; padding: 0;
+	list-style:none; z-index:99;
+}
+/* Prev, Next 버튼 박스 */
+ul.bjqs-controls li a {
+  display:block; position:absolute; width:50px; height:496px;
+  font-size:48px; color:#FFF; text-align:center; line-height:455px;
+  text-shadow:1px 1px 1px #000;
+  text-decoration:none; opacity:0;
+  transition:all 0.4s ease-in;
+  /* background:rgba(0, 0, 0, 0.3); */
+}
+/* Prev, Next 버튼 박스: 마우스 오버 */
+ul.bjqs-controls li a:hover {  
+  color:#FFF; text-decoration:none; opacity:1;
+  /*background:rgba(0, 0, 0, 0.6);*/
+}
+/* Prev, Next 버튼 박스 위치설정 */
+a.bjqs-prev { left:0; }
+a.bjqs-next { right:0; }
+
+/* Basic jQuery Slider 캡션(슬라이더 이미지에 대한 설명) 박스 */
+p.bjqs-caption { 
+	display:block; position:absolute; bottom:0; width:100%; 
+	margin:0; padding:2%;  
+	font-family:SHEEP; font-size:24px; color:#F4F4F4; text-align:left;
+	text-shadow:1px 1px 2px #000; background: rgba(0, 0, 0, 0.2);
+}
+
+/* 블릿 전체를 감싸는 박스 */
+ol.bjqs-markers { 
+	display:block; position:relative; width:110px;
+	margin:460px auto -40px auto; padding:0;
+	list-style:none; z-index:99; 
+}
+/* 블릿 좌우로 정렬하고 여백을 설정 */
+ol.bjqs-markers li { float:left; margin:0 5px; }
+/* 블릿을 원형으로 만들고 배경을 설정 */
+ol.bjqs-markers li a { 
+  display:block; width:20px; height:20px; overflow:hidden;  
+  text-indent:-9999px; background:#006; border-radius:20px;
+}
+/* 활성화된 블릿의 너비값과 배경을 설정 */
+ol.bjqs-markers li.active-marker a { width:40px; background:#FC0; }
+
+
+
+
+
+
+
+
